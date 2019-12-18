@@ -1,0 +1,1 @@
+<!--{assign_html title="Активация учетной записи"}--><!--{include file="common:page.main.tpl" content_tpl="common:base/user/content.activate.tpl"}-->

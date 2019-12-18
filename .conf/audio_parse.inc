@@ -1,0 +1,5 @@
+;AUDIO_PROG_CMD_PATH = "/usr/local/bin/ffmpeg1";
+AUDIO_PROG_CMD_PATH = "/usr/bin/ffmpeg";
+
+;AUDIO_SRC_PATH = "/audio/UR2/20130109/";
+;AUDIO_DEST_PATH = "/audio_slice/UR2/20130109/generation_13589449899956/";

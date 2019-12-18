@@ -1,0 +1,1 @@
+<!--{assign_html title="Error 404"}--><!--{include file="common:page.main.tpl" content_tpl="common:base/page/content.err404.tpl"}-->

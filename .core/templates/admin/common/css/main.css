@@ -1,0 +1,604 @@
+body {
+	background: #FFFFFF;
+	color: #000000;
+	font: 11px verdana, arial, sans-serif;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	/*padding: 10px 10px 0 10px*/
+	padding: 5px 10px 0 10px;
+}
+img{
+	border:none;
+}
+a { color: #6699CC; text-decoration: none; cursor: pointer; }
+a:hover { color: #6699CC; text-decoration: underline }
+div#loading {
+	background: #FFFFFF;
+	color: #000000;
+	height: 800px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 1000px;
+	z-index: 999
+}
+div#txt-loading {
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	color: #000000;
+	display: none;
+	font-weight: bold;
+	height: 33px;
+	padding: 7px;
+	position: absolute;
+	text-align: left;
+	width: 200px;
+	z-index: 1000
+}
+div#txt-loading div { margin-top: 10px }
+div#txt-loading img { margin-right: 10px }
+div.box{
+	width: 100% !important;
+}
+div.breadcrump {
+	color: #FF0000;
+	float: left;
+	margin: 0;
+	padding: 6px 0 2px 5px
+}
+.spacer,
+div.clear {
+    clear: both
+}
+div.content { margin: 0; padding: 0 5px 0 5px }
+div.copy {
+	background: #FFFFFF;
+	color: #CCCCCC;
+	font-size: 10px;
+	text-align: right
+}
+div.errors {
+	background: #FFEEEE;
+	border: 1px solid #FF0000;
+	color: #FF0000;
+	margin: 3px 0 3px 0;
+	text-align: left;
+	width: 100%
+}
+div.errors p {
+	background: url(/_images/x-ico.gif) #FFCCCC no-repeat 5px 5px;
+	color: #FF0000;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 20px 5px 20px
+}
+div.errors ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 20px 10px 20px
+}
+div.footer { height: 20px; padding: 10px; width: 100% }
+div.header { color: #000000; font-size: 12px; margin: 0 }
+/* </Menu> */
+div.login {
+	background: #FF0000 !important;
+	border-left: 1px solid #000000;
+	float: right;
+	height: 100%;
+	text-align: right
+}
+div.main { overflow: auto; width: 100% }
+/* <Menu> */
+div.menu{
+	position: relative;
+	background: #EEEEEE;
+	border: 1px solid #777777;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+div.menu a {
+	display: block;
+	_float: left;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0 5px 0 5px;
+}
+
+div.menu a.sub {
+	background: url('/_images/down-arrow.gif') no-repeat right 8px;
+	padding-right: 11px
+}
+div.menu a.sub:hover {
+	background: url('/_images/down-arrow-hover.gif') #6699CC no-repeat right 8px;
+}
+div.menu a:hover {
+	background: #6699CC;
+	color: #FFFFFF;
+	text-decoration: none
+}
+div.menu div{ float: left; margin: 0; padding: 0 }
+div.menu div.last { float: right }
+div.menu div.subitems {
+	background: #EEEEEE;
+	border: 1px solid #666666;
+	clear: both;
+	display: none;
+	font-weight: normal;
+	position: absolute;
+	top: 20px;
+	min-width: 170px;
+    z-index:1100;
+}
+
+div.menu div.subitems a {
+    display: block;
+    padding: 3px;
+    min-width: 164px
+}
+div.messages {
+	background: #EEEEFF;
+	border: 1px solid #0000FF;
+	color: #0000FF;
+	margin: 3px 0 3px 0;
+	width: 100%
+}
+div.messages p {
+	background: #CCCCFF;
+	color: #0000FF;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 20px 5px 20px
+}
+div.messages ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px 20px 10px 20px
+}
+div.pagination { float: right; padding: 6px 5px 2px 5px }
+.pagination .current{
+    /*border: 1px dashed #000;*/
+    background: url("/_images/grid-header-bg.gif") repeat-x scroll center top #EEEEEE;
+    border-radius: 2px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+div.person-menu {
+	background: #EEEEEE;
+	border: 1px solid #CCCCCC;
+	width: 140px
+}
+div.person-menu span { display: block; padding: 3px 0 3px 11px }
+div.title {
+	color: #EEEEEE;
+	float: left;
+	font-size: 36px;
+	padding: 3px 15px 8px 0
+}
+form { margin: 0; padding: 0 }
+input, select, textarea {
+	border: 1px solid #CCCCCC;
+    /*border-radius: 3px;*/
+	font: 12px verdana,arial,sans-serif
+}
+input.button {
+	background: url('/_images/button.gif') #6699CC;
+	border: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 25px;
+	margin: 0;
+	width: 110px
+}
+input.button-login{
+	background: url('/_images/login-button.gif') #6699CC !important;
+	color:black;
+	vertical-align:middle;
+}
+table { margin: 0; padding: 0 }
+table.grid {
+	background: #FFFFFF;
+	border-left: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+table.grid tr td {
+	border-bottom: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	line-height: 18px;
+	padding: 2px 4px 2px 4px
+}
+table.grid tr td input.chk {
+	width: 17px;
+	height: 17px
+}
+table.grid tr td input { width: 100% }
+table.grid tr td select { width: 100% }
+table.grid tr td textarea { width: 100% }
+table.grid tr td.check {
+	border-right: none;
+	padding: 2px 2px 2px 4px;
+	width: 15px
+}
+table.grid tr td.check input { height: 15px; margin: 0; width: 15px }
+table.grid tr td.req { color: #FF0000; vertical-align: middle; width: 10px }
+table.grid tr td.title { border-right: none; text-align: right; width: 200px }
+table.grid tr th {
+	background: url('/_images/grid-header-bg.gif') #EEEEEE repeat-x top;
+	border-bottom: 2px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	color: #000000;
+	height: 22px
+}
+table.grid tr th.check { border-right: none; width: 20px }
+table.grid tr th.check input{ border: none !important }
+table.grid tr.bg { background: #EEEEEE }
+
+table.grid tr.o-success { background: #FF8000 }
+table.grid tr.o-failed { background: #00BFFF }
+table.grid tr.o-unfinished { background: #FF6A6A }
+table.grid tr.o-in-delivery { background: #F6B06A }
+table.grid tr.o-oper-marked { background: #FFCBDB }
+table.grid tr.o-error { background: #f00; }
+
+/*---------| link font for normal view |--------*/
+table.grid tr.o-success a,
+table.grid tr.o-failed a,
+table.grid tr.o-in-delivery a,
+table.grid tr.o-error a,
+table.grid tr.o-unfinished a
+{ color:#FFF; }
+
+table.toolbar { margin: 0 }
+table.toolbar tr { height: 20px }
+table.toolbar tr td {
+	background: #FFFFFF;
+	color: #999999;
+	cursor: default;
+	margin: 0px;
+	padding: 3px 5px 3px 5px
+}
+table.toolbar tr td input {
+	background: url('/_images/button.gif') #6699CC;
+	border: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 25px;
+	margin: 0;
+	width: 110px
+}
+
+#button_greater{
+	background: url('/_images/button_greater.gif') #6699CC;
+	border: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 25px;
+	margin: 0;
+	width: 210px
+}
+
+table.toolbar tr td input.disabled {
+	background: url('/_images/button.gif') #6699CC;
+	border: none;
+	color: #CCCCCC;
+	font-weight: bold;
+	height: 25px;
+	margin: 0;
+	width: 110px
+}
+table.toolbar tr td.disabled { background: #EEEEEE }
+table.toolbar tr td.hover { background: #99CCFF; color: #000000 }
+/*
+.date-picker { margin: 0; padding: 0 }
+.date-picker select, .date_picker span{ float: left; margin: 0 5px 0 0 }
+.date-picker select.day{ width: 45px }
+.date-picker select.month{ width: 90px }
+.date-picker select.year{ width: 60px }
+*/
+.date-picker { margin: 0; padding: 0 }
+.date-picker select, .date_picker span{ float: left; margin: 0 5px 0 0 }
+.date-picker select.day{ width: 45px }
+.date-picker select.month{ width: 95px }
+.date-picker select.year{ width: 60px }
+.date-picker select.hours{ width: 60px }
+.date-picker select.minutes{ width: 60px }
+
+.debug{ display: none }
+.debug_buttons { color: #CCCCCC; float: left }
+.debug_buttons a { color: #CCCCEE }
+
+
+textarea.mceEditor{
+	border:1px solid black;
+	font-size:20px;
+	color:lime;
+}
+
+/* ============  swf uoload styles ============ */
+.progressWrapper {
+	width: 357px;
+	overflow: hidden;
+}
+
+.progressContainer {
+	margin: 5px;
+	padding: 4px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+.message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.blue {
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+.progressName {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #555;
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	font-family: Arial;
+	text-align: left;
+	white-space: nowrap;
+}
+
+a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 14px;
+	width: 14px;
+	background-image: url(/files/img_swfupload/cancelbutton.gif);
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+/*  END swf uoload styles  */
+
+a.common-link,
+img.common-link{
+    cursor: pointer;
+}
+
+
+table.tbl-manual{
+    border:1px solid #ccc;
+    border-collapse:collapse;
+    font-size:13px;
+}
+.tbl-manual td,
+.tbl-manual th{
+    border:1px solid #8D8D8D;
+    padding:2px 3px;
+}
+ul.nulled{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+
+/*---------| stats org |--------*/
+.stats-org{
+    padding-left: 12px !important;
+}
+.stats-org h3,
+.stats-org h4,
+.stats-org .section-name{
+    font-size: 16px;
+    font-weight: bold;
+    margin:3px 0;
+    color: #2A388A;
+}
+.stats-org h4{
+    font-size: 13px;
+}
+.stats-org .event-name{
+    margin: 10px 0;
+}
+.stats-org .section-name{
+    color: red;
+}
+.stats-org .so-h{
+    padding:0;
+    margin:5px 0;
+}
+.stats-org ul.so-rows-seats{
+    padding-left: 10px;
+}
+.stats-org table.standart-display th,
+.stats-org table.standart-display td{
+    padding: 3px;
+}
+
+/*---------| standart display |--------*/
+table.standart-display {
+    border: 1px solid #DDD9CC;
+    border-collapse: collapse;
+    color: #000000;
+    font-size: 14px;
+}
+table.standart-display a {
+    color: #000000;
+}
+table.standart-display th, table.standart-display td {
+    border: 1px solid #B1B9E2;
+    padding: 8px 5px;
+}
+table.standart-display td p.sector-name {
+    font-weight: bold;
+    margin: 2px 0;
+    text-indent: 0;
+}
+
+/*---------| ui timepicker 2012 |--------*/
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+ul.news-browse a.create{
+    font-weight: bold;
+}
+
+ul.news-browse .action-lnk{
+    display: block;
+    width: 200px;
+    float: left;
+}
+ul.news-browse div.news-title{
+    float: left;
+}
+
+/*---------| tranlations related |--------*/
+.transl-related{
+    position: relative;
+    width: 38%;
+    padding-left: 10px;
+    float: left;
+}
+
+.transl-related .transl-show-hide {
+    background: url('/-images/plusminus.png') no-repeat 0 0;
+    padding-left: 20px;
+    display: block;
+    height: 18px;
+}
+
+.transl-related .transl-show-hide-minus{
+    background-position: 0 -18px;
+}
+
+.transl-related .slidingDiv{
+    display: none;
+}
+.transl-related table{
+    font-size: 12px;
+}
+
+.transl-related table .col-name{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#tRelName,
+#tRelShort,
+#tRelFull{
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+#tRelName{
+    top: 0px;
+    max-height: 50px;
+}
+
+#tRelShort {
+    top: 235px;
+    max-height: 60px;
+}
+
+#tRelFull {
+    top: 350px;
+    max-height: 300px;
+}
+
+.stat_page #tRelShort{
+    top: 140px;
+}
+
+.stat_page #tRelFull{
+    top: 300px;
+}
+
+
+#manTranslLangs .existed{
+    font-weight: bold;
+}
+
+.news-top,
+.news-top a{
+    font-weight: bold;
+    color: #FF6A6A;
+}
+
+.news-main{
+    font-weight: bold;
+}
+
+.man-trans-date .unpublished{
+    font-style: italic;
+}

@@ -1,0 +1,41 @@
+тестові команди, у тому числі для програм, які можуть буди довші, ніж 1 година
+
+http://superuser.com/questions/314239/how-to-join-merge-many-mp3-files
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out1.mp3
+
+ffmpeg -t 3500 -acodec copy -i 10.mp3 outputfile.mp3
+
+ffmpeg -t 3500 -i 10.mp3 outputfile.mp3
+
+ffmpeg -i in.mov -c:a copy out.m4a
+
+cd d:\denwer3\home\sched.dev\www\audio\UR2\ex\
+ffmpeg -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out.mp3
+ffmpeg -i 13.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out.mp3
+
+ffmpeg -i 11.mp3 -t 00:05:33.000 -c:a copy out2.mp3
+
+ffmpeg -i "concat:out1.mp3|out2.mp3|out3.mp3" -c:a copy zzz__full.mp3
+
+ffmpeg -i "concat:10.mp3 -ss 00:50:00.000|out2.mp3|out3.mp3" -c:a copy zzz__full.mp3
+
+cd /mnt/windev/sched.dev/www/audio/UR2/ex
+/usr/local/bin/ffmpeg  -i 11.mp3 -t 00:05:33.000 -c:a copy unix.mp3
+/usr/local/bin/ffmpeg -t 3500 -acodec copy -i 10.mp3  outputfile.mp3
+
+/usr/local/bin/ffmpeg1 -i 11.mp3 -t 00:05:33.000 -c:a copy unix.mp3
+/usr/local/bin/ffmpeg1 -i "concat:out1.mp3|out2.mp3|out3.mp3" -c:a copy zzz__full_UNIX.mp3
+
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a  copy out1.mp3
+/usr/local/bin/ffmpeg1 -i 13.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out2.mp3
+/usr/local/bin/ffmpeg1 -i "concat:out1.mp3|12.mp3|out2.mp3" -c:a copy z__full.mp3
+
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy -y out1.mp3
+
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out1.mp3 &&
+/usr/local/bin/ffmpeg1 -i 13.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out2.mp3 &&
+/usr/local/bin/ffmpeg1 -i "concat:out1.mp3|12.mp3|out2.mp3" -c:a copy z__full.mp3
+
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out1.mp3 && /usr/local/bin/ffmpeg1 -i 13.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out2.mp3 && /usr/local/bin/ffmpeg1 -i "concat:out1.mp3|12.mp3|out2.mp3" -c:a copy z__full.mp3
+
+/usr/local/bin/ffmpeg1 -i 10.mp3 -ss 00:50:00.000 -t 00:10:00.000 -c:a copy out1.mp3 

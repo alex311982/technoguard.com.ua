@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b32db32f-0649-4901-b832-a49b657e9699" name="technoguard.com.ua" url="http://gvh41.mirohost.net">
+        <fileTransfer host="gvh41.mirohost.net" port="21" rootFolder="/technoguard.com.ua">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

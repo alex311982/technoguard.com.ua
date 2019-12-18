@@ -1,0 +1,34 @@
+RewriteEngine on
+
+
+RewriteRule ^_images/(.*)$ /.core/templates/admin/common/images/$1 [L]
+RewriteRule ^_css/(.*)$ /.core/templates/admin/common/css/$1 [L]
+RewriteRule ^_js/(.*)$ /.core/templates/admin/common/js/$1 [L]
+RewriteRule ^_fck/(.*)$ /fck/$1 [L]
+
+
+RewriteRule ^-images/(.*)$ /.core/templates/frontend/common/images/$1 [L]
+RewriteRule ^-css/(.*)$ /.core/templates/frontend/common/css/$1 [L]
+RewriteRule ^-js/(.*)$ /.core/templates/frontend/common/js/$1 [L]
+RewriteRule ^-mod/([^/]+)/([^/]+)/([^/]+)/(.+)$ /.core/templates/frontend/$1/$2/$3/$4 [L] # !!!
+
+#RewriteCond	%{REQUEST_URI}	!-d
+RewriteCond	%{REQUEST_URI}	!^/$
+RewriteCond	%{REQUEST_URI}	!\.pdf
+RewriteCond	%{REQUEST_URI}	!\.htm$
+RewriteCond	%{REQUEST_URI}	!\.txt
+RewriteCond	%{REQUEST_URI}	!\.doc
+RewriteCond	%{REQUEST_URI}	!\.rtf
+RewriteCond	%{REQUEST_URI}	!\.ppt
+
+RewriteCond	%{REQUEST_URI}	!\.php
+RewriteCond	%{REQUEST_URI}	!\.ico
+RewriteCond	%{REQUEST_URI}	!\.js
+RewriteCond	%{REQUEST_URI}	!\.xml
+RewriteCond	%{REQUEST_URI}	!\.xls
+RewriteCond	%{REQUEST_URI}	!\.swf
+RewriteCond	%{REQUEST_URI}	!\.flv
+RewriteCond	%{REQUEST_URI}	!\.jar
+RewriteRule	!\.(gif|php|css|jpg|jpeg|png|svg|cdr)$	/index.php [L]
+
+RewriteRule	^[/]?$	index.php	[L]

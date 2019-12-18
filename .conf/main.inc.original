@@ -1,0 +1,43 @@
+[MODE]
+;LIVE_VERSION = 0; 0 | 1
+LIVE_VERSION = 0;
+
+[Common]
+site_domain		= "sched.dev" ; site domain e.g. mysite.com
+SITE_HOST		= "sched.dev" ; site domain e.g. mysite.com
+COOKIE_DOMAIN = ".sched.dev";
+site_title		= "sched.dev" ; Frontend site name
+site_title_delimiter	= " :: ";
+DISPLAY_ERRORS = 1;
+
+[Locale]
+; Smarty Date Format
+DEFAULT_DATE_FORMAT	= "%d.%m.%Y"
+default_time_format  = "%H:%M"   ; Smarty Time Format
+; Smarty Date Picker Order: D[ate] M[onth] Y[ear]
+date_picker_order	= "DMY"
+; PHP Date Format
+date_format		= "d.m.Y"
+; Locale HTML Charset
+site_html_charset	= "UTF-8"
+
+
+[Database]
+db_host			= "localhost"
+db_base			= "sched_dev" ; mysql database name
+db_user			= "root" ; mysql database user
+db_pass			= "" ; mysql database password
+db_port			= ""
+db_table_prefix	= ""
+db_charset		= "utf8"
+
+[Pagination]
+site_per_page		= 25
+site_per_pagination	= 10
+
+[Core]
+debug                   = E_ALL
+super_admin             = "yes"
+
+WYSIWYG_ALLOWED_TAGS = "<strong><em><u><a><img><p><br><ul><li><center><font>"
+
