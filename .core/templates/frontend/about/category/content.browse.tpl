@@ -102,7 +102,7 @@
         <div class="footer__inner">
             <nav class="footer__menu">
                 <ul>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
                     <li><a href="/contact">Контакты</a></li>
                 </ul>
             </nav>

@@ -22,6 +22,11 @@ a {
     max-width: 1140px;
     margin: 0 auto;
 }
+@media (max-width: 769px) {
+    .container.no-padding {
+        padding: 0;
+    }
+}
 .container.smaller {
     max-width: 1024px;
 }
@@ -381,7 +386,7 @@ a {
     margin: 0 20px;
     cursor: pointer;
 }
-.tabs ul li.active {
+.tabs ul li.active a {
     color: #FFB14B;
 }
 
@@ -808,7 +813,7 @@ a {
     justify-items: center;
 }
 .cases__items img {
-    object-fit: contain;
+    object-fit: cover;
     width: 255px;
     height: 255px;
 }
@@ -1024,5 +1029,3 @@ a {
 .about-us__block ul {
     list-style: none;
 }
-
-/*# sourceMappingURL=/style.97fcb138.css.map */

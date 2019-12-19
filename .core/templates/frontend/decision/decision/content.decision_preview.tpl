@@ -43,14 +43,16 @@
     <div class="container small">
         <!--{$item.long_text}-->
         <div class="case-buttons">
-            <a href="retail.html">
+            <a href="direction.html?type=<!--{$item.direction_type}-->">
                 <img class="right" src="/-images/new/assets/icons/ic_arrow.svg" alt="Arrow Icon">
                 В раздел <!--{$direction_title}-->
             </a>
-            <a class="right-button" href="/decision.html?id=<!--{$next_news_id}-->">
-                Следующая
-                <img src="/-images/new/assets/icons/ic_arrow.svg" alt="Arrow Icon">
-            </a>
+            <!--{if $next_news_id}-->
+                <a class="right-button" href="/decision.html?id=<!--{$next_news_id}-->">
+                    Следующая
+                    <img src="/-images/new/assets/icons/ic_arrow.svg" alt="Arrow Icon">
+                </a>
+            <!--{/if}-->
         </div>
     </div>
 </section>
@@ -62,7 +64,7 @@
         <div class="cases__items">
             <!--{foreach from=$news item=news_item}-->
             <a href="/decision.html?id=<!--{$news_item.id}-->" class="cases__item">
-                <img style="width:255px; height:254px" src="<!--{$news_item.imagePath}-->" alt="adv 1">
+                <img src="<!--{$news_item.imagePath}-->" alt="adv 1">
                 <p><!--{$news_item.title}--></p>
             </a>
             <!--{/foreach}-->
@@ -99,7 +101,7 @@
         <div class="footer__inner">
             <nav class="footer__menu">
                 <ul>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
                     <li><a href="/contact">Контакты</a></li>
                 </ul>
             </nav>

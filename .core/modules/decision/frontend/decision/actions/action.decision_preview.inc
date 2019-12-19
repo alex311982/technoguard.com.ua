@@ -29,7 +29,7 @@ foreach ($news as &$news_) {
 
 sort($nextNewsIds);
 
-is_null($nextNewsId) ? $nextNewsId = reset($nextNewsIds) : null;
+is_null($nextNewsId) && !empty($nextNewsIds) ? $nextNewsId = reset($nextNewsIds) : null;
 
 $directions = array(
     'retail' => 'ритейла', 'agroprom' => 'агропрома', 'RFID' => 'RFID'

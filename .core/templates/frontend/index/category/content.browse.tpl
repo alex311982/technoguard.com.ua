@@ -20,7 +20,7 @@
 
         <nav role="navigation" class="menu">
             <ul>
-                <li><a href="/about">О компании</a></li>
+                <li><a href="/about.">О компании</a></li>
                 <li><a href="/contact">Контакты</a></li>
             </ul>
         </nav>
@@ -55,15 +55,15 @@
     <section class="tabs">
 
         <ul class="tabs__caption">
-            <li class="active">Ритейл</li>
-            <li>Агропром</li>
-            <li>RFID</li>
+            <li class="active"><a href="#retail" data-scroll="retail">Ритейл</a></li>
+            <li><a href="#agroprom" data-scroll="agroprom">Агропром</a></li>
+            <li><a href="#rfid" data-scroll="rfid">RFID</a></li>
         </ul>
 
         <div class="tabs__content active">
 
             <div class="tab__content">
-                <div class="tab__main left-position">
+                <div id="retail" class="tab__main left-position">
                     <h2>Ритейл</h2>
                     <p>Защищаем предприятия розничной
                         и оптовой торговли от краж и порчи
@@ -78,7 +78,7 @@
             </div>
             <div class="tab__content">
                 <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-                <div class="tab__main right-position">
+                <div id="agroprom" class="tab__main right-position">
                     <h2>Агропром</h2>
                     <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
                         и транспортировки сельхозпродукции</p>
@@ -89,13 +89,13 @@
                 </div>
             </div>
             <div class="tab__content">
-                <div class="tab__main left-position">
+                <div id="rfid" class="tab__main left-position">
                     <h2>RFID</h2>
                     <p>Защищаем предприятия розничной
                         и оптовой торговли от краж и порчи
                         с комфортом для персонала
                         и покупателя</p>
-                    <a href="/direction.html?type=retail">
+                    <a href="/direction.html?type=RFID">
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
                         Выбрать решение для RFID
                     </a>
@@ -103,77 +103,32 @@
                 <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
             </div>
         </div>
-
-        <div class="tabs__content">
-            <div class="tab__content">
-                <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-                <div class="tab__main right-position">
-                    <h2>Агропром</h2>
-                    <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                        и транспортировки сельхозпродукции</p>
-                    <a href="/direction.html?type=agroprom">
-                        Выбрать решение для агропрома
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                    </a>
-                </div>
-            </div>
-            <div class="tab__content">
-                <div class="tab__main left-position">
-                    <h2>Ритейл</h2>
-                    <p>Защищаем предприятия розничной
-                        и оптовой торговли от краж и порчи
-                        с комфортом для персонала
-                        и покупателя</p>
-                    <a href="/direction.html?type=retail">
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение для ритейла
-                    </a>
-                </div>
-                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-            </div>
-        </div>
-        <div class="tabs__content">
-            <div class="tab__content">
-                <div class="tab__main left-position">
-                    <h2>Ритейл</h2>
-                    <p>Защищаем предприятия розничной
-                        и оптовой торговли от краж и порчи
-                        с комфортом для персонала
-                        и покупателя</p>
-                    <a href="/direction.html?type=retail">
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение для ритейла
-                    </a>
-                </div>
-                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-            </div>
-            <div class="tab__content">
-                <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-                <div class="tab__main right-position">
-                    <h2>Агропром</h2>
-                    <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                        и транспортировки сельхозпродукции</p>
-                    <a href="/direction.html?type=agroprom">
-                        Выбрать решение для агропрома
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
     <section class="tabs-mobile">
-        <a href="#" class="tabs-mobile-content">
-            <h2>Ритейл</h2>
-            <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-            <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                и транспортировки сельхозпродукции</p>
-        </a>
-        <a href="#" class="tabs-mobile-content">
-            <h2>Агропром</h2>
-            <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-            <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                и транспортировки сельхозпродукции</p>
-        </a>
+        <div data-scroll="retail">
+            <a href="/direction.html?type=retail" class="tabs-mobile-content">
+                <h2>Ритейл</h2>
+                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
+                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
+                    и транспортировки сельхозпродукции</p>
+            </a>
+        </div>
+        <div data-scroll="agroprom">
+            <a href="/direction.html?type=agroprom" class="tabs-mobile-content">
+                <h2>Агропром</h2>
+                <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
+                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
+                    и транспортировки сельхозпродукции</p>
+            </a>
+        </div>
+        <div data-scroll="rfid">
+            <a href="/direction.html?type=RFID" class="tabs-mobile-content">
+                <h2>RFID</h2>
+                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
+                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
+                    и транспортировки сельхозпродукции</p>
+            </a>
+        </div>
     </section>
 </div>
 
@@ -186,8 +141,8 @@
                 <form action="./index.js">
                     <input required placeholder="Ваше имя" aria-placeholder="Ваше имя" type="text" name="name" id="name">
                     <input required placeholder="Email" aria-placeholder="Email" type="email" name="email" id="email">
-                    <textarea placeholder="Опишите ваш запрос в двух словах" aria-placeholder="Опишите ваш запрос в двух словах"
-                              name="about" id="about" rows="10"></textarea>
+                    <textarea placeholder="Опишите ваш запрос в двух словах"
+                              aria-placeholder="Опишите ваш запрос в двух словах" name="about" id="about" rows="10"></textarea>
                     <button class="form-button" type="submit">Отправить запрос</button>
                 </form>
                 <div class="success-block">
@@ -205,7 +160,7 @@
         <div class="footer__inner">
             <nav class="footer__menu">
                 <ul>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
                     <li><a href="/contact">Контакты</a></li>
                 </ul>
             </nav>

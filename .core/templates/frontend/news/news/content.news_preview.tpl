@@ -62,7 +62,7 @@
         <div class="cases__items">
             <!--{foreach from=$news item=news_item}-->
             <a href="/news.html?id=<!--{$news_item.id}-->" class="cases__item">
-                <img style="width:255px; height:254px" src="<!--{$news_item.imagePath}-->" alt="adv 1">
+                <img src="<!--{$news_item.imagePath}-->" alt="adv 1">
                 <p><!--{$news_item.news_title}--></p>
             </a>
             <!--{/foreach}-->
@@ -99,7 +99,7 @@
         <div class="footer__inner">
             <nav class="footer__menu">
                 <ul>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
                     <li><a href="/contact">Контакты</a></li>
                 </ul>
             </nav>

@@ -44,14 +44,7 @@ return array(
         'browse' => true,
         'view' => true,
     ),
-
-    'url' => array(
-        'title' => 'Url',
-        'type' => 'text',
-        'browse' => true,
-        'view' => true,
-    ),
-
+    
     'enabled' => array(
         'title' => 'Активний',
         'type' => 'checkbox',

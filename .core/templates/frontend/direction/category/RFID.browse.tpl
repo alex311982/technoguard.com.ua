@@ -124,7 +124,7 @@
 <!--{if !empty($news)}-->
     <section class="cases">
         <div class="container">
-            <h2>Наш опыт внедрения решений для ритейла</h2>
+            <h2>Наш опыт внедрения решений для RFID</h2>
             <div class="cases__items">
                 <!--{foreach from=$news item=news_item}-->
                     <a href="/news.html?id=<!--{$news_item.id}-->" class="cases__item">

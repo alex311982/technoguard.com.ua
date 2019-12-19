@@ -40,9 +40,9 @@ switch ($type) {
         $title = 'Technoguard | Retail';
 
         break;
-    case 'security':
-        $type = 'security';
-        $title = 'Technoguard | Security';
+    case 'RFID':
+        $type = 'RFID';
+        $title = 'Technoguard | RFID';
 
         break;
 
