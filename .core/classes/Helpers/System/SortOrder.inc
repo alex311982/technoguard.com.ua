@@ -34,6 +34,7 @@ class SortOrder
                 1
                 $SQL_EXTRA
         ";
+
         $row = $this->DB->RunSql($sql);
 
         return $row['max_order'] + $this->_sortOrderOffset;

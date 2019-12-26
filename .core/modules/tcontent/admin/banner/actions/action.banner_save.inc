@@ -36,6 +36,10 @@ else
 {
     $imgUploadObj->mainUploadAndResize($_FILES, $photo_field_name, $photo_prefix);
 
+    /** @var \Ekv\Helpers\System\SortOrder $sortObj */
+    $sortObj = $this->createSortOrderObj();
+    $VARS["sort_order"] = $sortObj->getNextMaxOrder();
+
     if ($this->IsError() == false){
         $id = $this->DB->InsertRecord($VARS);
     }

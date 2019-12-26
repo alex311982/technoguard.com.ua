@@ -1,5 +1,5 @@
 <?php
-/** @var $this BankPresenter */
+
 use Ekv\Helpers\System\FileUpload\EntityImageUpload;
 
 $table = $this->DB->table;
@@ -35,6 +35,11 @@ if($id_item > 0)
 else
 {
     $imgUploadObj->mainUploadAndResize($_FILES, $photo_field_name, $photo_prefix);
+
+    /** @var \Ekv\Helpers\System\SortOrder $sortObj */
+    $sortObj = $this->createSortOrderObj($VARS["direction_type"]);
+    $sqlExtra = " AND `direction_type` = '{$VARS["direction_type"]}' ";
+    $VARS["sort_order"] = $sortObj->getNextMaxOrder($sqlExtra);
 
     if ($this->IsError() == false){
         $id = $this->DB->InsertRecord($VARS);

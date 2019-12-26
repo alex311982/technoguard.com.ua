@@ -82,7 +82,7 @@
         </div>
         <div class="benefits__main">
             <!--{foreach from=$decisions item=decision}-->
-                <div class="benefits__single special">
+                <div class="benefits__single">
                     <a href="#decision-<!--{$decision.id}-->" data-scroll="decision-<!--{$decision.id}-->">
                         <!--{$decision.title}-->
                     </a>

@@ -39,39 +39,19 @@
     </div>
 </main>
 
+<!--{if !empty($directionquotes)}-->
 <section class="description">
     <div class="container">
         <div class="description__inner">
-            <div class="description__block">
-                <p>Онлайн-мониторинг событий в торговых залах — на входе и выходе, в складских помещениях, в зоне погрузки
-                    товара, на автостоянке.</p>
-                <p>Контроль кассовых операций
-                    с помощью системы видеонаблюдения, интегрированной с кассовыми терминалами.</p>
-                <p class="special"><span>/</span> Акустомагнитное и радиочастотное антикражное оборудование — антикражные
-                    этикетки и датчики
-                    на товаре, съемники и деактиваторы
-                    для проданных товаров.</p>
-                <p>Антикражные ворота с сигналом
-                    о попытке выноса неоплаченного товара из магазина.</p>
-            </div>
-            <div class="description__block">
-                <p class="special"><span>/</span> Защищенные решения для открытой выкладки товаров с подзарядкой, аналитикой,
-                    презентацией.
-                </p>
-                <p>Контроль несанкционированного прохода в служебные помещения, идентификация посетителей, учет времени
-                    персонала.</p>
-                <p>Предупреждение взлома, нападения, открытия, потери связи электропитания.</p>
-
-                <p>Сбор и анализ данных о потоках потенциальных клиентов
-                    за определенный промежуток времени.</p>
-
-                <p>Пожарное оповещение
-                    и музыкальное фоновое озвучивание
-                    для стимуляции сбыта в точках продаж.</p>
-            </div>
+            <!--{foreach from=$directionquotes item=directionquote}-->
+                <div class="description__block">
+                    <!--{$directionquote.text}-->
+                </div>
+            <!--{/foreach}-->
         </div>
     </div>
 </section>
+<!--{/if}-->
 
 <!--{if !empty($decisions)}-->
 <section class="benefits">
@@ -82,27 +62,28 @@
         </div>
         <div class="benefits__main">
             <!--{foreach from=$decisions item=decision}-->
-                <div class="benefits__single special">
+                <div class="benefits__single">
                     <a href="#decision-<!--{$decision.id}-->" data-scroll="decision-<!--{$decision.id}-->">
                         <!--{$decision.title}-->
                     </a>
                 </div>
             <!--{/foreach}-->
         </div>
+    </div>
 
-        <!--{foreach from=$decisions item=decision}-->
-            <div id="decision-<!--{$decision.id}-->" class="tab__content no-mobile">
-                <div class="tab__main left-position">
-                    <h2><!--{$decision.title}--></h2>
-                    <p><!--{$decision.text}--></p>
-                    <a href="/decision.html?id=<!--{$decision.id}-->">
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение
-                    </a>
-                </div>
-                <img class="tab__image" src="<!--{$decision.imagePath}-->" alt="tab 1">
+    <!--{foreach from=$decisions item=decision}-->
+        <div id="decision-<!--{$decision.id}-->" class="tab__content no-mobile">
+            <div class="tab__main left-position">
+                <h2><!--{$decision.title}--></h2>
+                <p><!--{$decision.text}--></p>
+                <a href="/decision.html?id=<!--{$decision.id}-->">
+                    <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
+                    Выбрать решение
+                </a>
             </div>
-        <!--{/foreach}-->
+            <img class="tab__image" src="<!--{$decision.imagePath}-->" alt="tab 1">
+        </div>
+    <!--{/foreach}-->
 
         <section class="tabs-mobile">
             <!--{foreach from=$decisions item=decision}-->

@@ -39,5 +39,12 @@ class TcontentBanner extends Entity
 
         return $breadcrumps;
     }
-}
 
+    /**
+     * @return SortOrder
+     */
+    public function createSortOrderObj()
+    {
+        return new SortOrder("banners");
+    }
+}

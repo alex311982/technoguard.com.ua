@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT * FROM `banners` WHERE `enabled`=1 ORDER BY `date_created` DESC";
+$sql = "SELECT * FROM `banners` WHERE `enabled`=1 ORDER BY `sort_order` DESC";
 
 $banners = $this->DB->runSql($sql,true);
 

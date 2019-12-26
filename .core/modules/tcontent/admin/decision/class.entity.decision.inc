@@ -1,10 +1,6 @@
 <?php
 
-use Ekv\Helpers\System\Lang;
 use Ekv\Helpers\System\SortOrder;
-use Ekv\System\MenuFront\MenuFrontHelper;
-use Ekv\TContent\Banner\BannerRoot;
-use Ekv\TContent\Slide\SlideRoot;
 
 class TcontentDecision extends Entity
 {
@@ -38,6 +34,17 @@ class TcontentDecision extends Entity
             'href' => 'decision_list');
 
         return $breadcrumps;
+    }
+
+    /**
+     * @param string $type
+     * @return SortOrder
+     */
+    public function createSortOrderObj($type)
+    {
+        $sqlExtra = " AND `direction_type` = '{$type}' ";
+
+        return new SortOrder("decisions", $sqlExtra);
     }
 }
 

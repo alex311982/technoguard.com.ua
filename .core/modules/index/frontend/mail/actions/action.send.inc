@@ -1,14 +1,32 @@
 <?php
 
-$to = 'alex.gubarev.web@gmail.com';
+$path = __FILE__;
+//--- fix when path is applied only like a dir ---//
+if(is_dir($path)){
+    $dir = $path;
+}else{
+    $dir = dirname($path);
+}
 
-$subject = 'Website Change Reqest';
+$mail = file_get_contents($dir . '/../mail.tpl');
 
-$headers = "From: " . "alex.gubarev.web@gmail.com" . "\r\n";
+$mail = str_replace(
+    ['%name%', '%email%', '%text%'],
+    [$_REQUEST['name'], $_REQUEST['email'], $_REQUEST['text']],
+    $mail
+);
+
+$to = 'valeriymir@gmail.com';
+
+$subject = 'Заявка c сайта technoguard.com.ua';
+
+$headers = "From: " . "info@technoguard.com.ua" . "\r\n";
 
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-$message = '<p><strong>This is strong text</strong> while this is not.</p>';
+$message = $mail;
 
 
-mail($to, $subject, $message, $headers);
+$res = mail($to, $subject, $message, $headers);
+
+echo $res ? 'true' : 'false';

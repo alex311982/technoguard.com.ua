@@ -92,6 +92,11 @@
                     <p>Спасибо за ваше обращение.
                         Мы постараемся ответить быстро!</p>
                 </div>
+                <div class="error-block">
+                    <img src="/-images/new/assets/icons/ic_mark.svg" alt="Mark icon">
+                    <p>Спасибо за ваше обращение.
+                        Ошибка отправки письма. Попробуйте еще.</p>
+                </div>
             </div>
         </div>
     </div>

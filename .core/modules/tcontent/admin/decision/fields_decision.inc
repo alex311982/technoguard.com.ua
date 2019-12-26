@@ -67,4 +67,13 @@ return array(
         "align" => "center",
     ),
 
+    'sort_order' => array(
+        'title' => 'Порядок',
+        "sort_order" => true,
+        'browse' => true,
+        "width" => "60px",
+        "moving_item_id" => '<!--{$result.records.$id.id.value}-->',
+        "extra_params_str" => ''
+    ),
+
 );

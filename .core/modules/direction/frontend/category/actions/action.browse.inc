@@ -10,7 +10,7 @@ foreach ($news as &$item) {
     $item['imagePath'] = '/images/news/original/' . $item['photo_file'];
 }
 
-$sql = "SELECT * FROM `decisions` WHERE `direction_type` = '{$type}' AND enabled=1 ORDER BY `date_created` DESC";
+$sql = "SELECT * FROM `decisions` WHERE `direction_type` = '{$type}' AND enabled=1 ORDER BY `sort_order` DESC";
 
 $decisions = $this->DB->RunSql($sql, true);
 
@@ -50,6 +50,12 @@ switch ($type) {
         $type = 'retail';
         $title = 'Technoguard | Retail';
 }
+
+$sql = "SELECT * FROM `directionquotes` WHERE `enabled`=1 AND `direction_type` = '{$type}' ORDER BY `date_created` DESC LIMIT 2";
+
+$directionquotes = $this->DB->runSql($sql,true);
+
+$this->TML->assign('directionquotes', $directionquotes);
 
 $this->TML->assign('direction_type', $type);
 $this->TML->assign('title', $title);

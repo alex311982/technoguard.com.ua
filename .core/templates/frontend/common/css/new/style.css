@@ -291,10 +291,10 @@ a {
     }
 }
 .slide__right span {
-    font-size: 18px;
+    font-size: 17px;
     display: block;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 @media (max-width: 769px) {
     .slide__right span {
@@ -694,8 +694,10 @@ a {
 .heading__title h1 {
     font-size: 50px;
 }
-.heading__title h1 span {
+.heading__title h1::after {
+    content: "/";
     color: #FFB14B;
+    margin-left: 15px;
 }
 .heading__title h2 {
     font-size: 30px;
@@ -917,14 +919,16 @@ a {
 .contact-section__title h1 {
     font-size: 40px;
 }
+.contact-section__title h1::after {
+    content: "/";
+    color: #FFB14B;
+    margin-left: 15px;
+}
 @media (max-width: 769px) {
     .contact-section__title h1 {
         font-size: 22px;
         padding-left: 25px;
     }
-}
-.contact-section__title span {
-    color: #FFB14B;
 }
 .contact-section__image {
     position: relative;
@@ -1029,3 +1033,5 @@ a {
 .about-us__block ul {
     list-style: none;
 }
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

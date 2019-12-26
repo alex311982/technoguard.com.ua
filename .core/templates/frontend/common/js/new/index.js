@@ -45,9 +45,23 @@ $(document).ready(function () {
 
     $('.inner-form form').submit(function (e) {
       e.preventDefault();
-      $('.inner-form form').css('display', 'none');
-      $('.success-block').css('display', 'block');
+
+      $.post('/mail', {name : $('[name ="name"]').val()  , email :$('[name ="email"]').val(), text :$('[name ="about"]').val()  })
+          .done(function (data) {
+            $('.inner-form form').css('display', 'none');
+            $('.success-block').css('display', 'block');
+          })
+          .fail(function (error) {
+            $('.inner-form form').css('display', 'none');
+            $('.error-block').css('display', 'block');
+          });
     })
+
+    $('.benefits__single').hover(function () {
+      $(this).addClass('special');
+    }, function () {
+      $(this).removeClass('special');
+    });
 
     function scrollToAnchor(links) {
       links.each(function (_, v) {
