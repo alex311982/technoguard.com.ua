@@ -20,7 +20,7 @@
 
         <nav role="navigation" class="menu">
             <ul>
-                <li><a href="/about.">О компании</a></li>
+                <li><a href="/about">О компании</a></li>
                 <li><a href="/contact">Контакты</a></li>
             </ul>
         </nav>
