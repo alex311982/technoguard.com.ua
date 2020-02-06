@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap&subset=cyrillic"
           rel="stylesheet">
     <link rel="stylesheet" href="/-css/new/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157721625-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157721625-1');
+    </script>
     <title>Technoguard</title>
 </head>
 <body>
