@@ -147,6 +147,7 @@ $handler->view = SITE_CORE_VIEW;
 try{
     $handler->execute(SITE_CORE_ACTION);
 }catch(Exception $e){
+    var_dump($e);exit;
     if(EkvCommonHelper::isLiveVersionNow()){
 
         echo "<h2>Critical error has occured!  </h2>\n";

@@ -10,6 +10,17 @@ return array(
         'PK' => true
     ),
 
+    'lang' => array(
+        'title' => 'Язык',
+        'type' => 'select',
+        'options' => array(
+            '' => DEFAULT_SELECT_NAME, 'ru' => 'Русский', 'ua' => 'Украинский',
+        ),
+        'required' => true,
+        'browse' => true,
+        'view' => true,
+    ),
+
     'title' => array(
         'title' => 'Название',
         'type' => 'text',

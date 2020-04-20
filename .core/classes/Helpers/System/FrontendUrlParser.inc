@@ -66,6 +66,15 @@ class FrontendUrlParser
         $url_ready = ($url_ready{0} == '/') ? substr($url_ready, 1) : $url_ready;
         $url_ready = str_replace('"', '', $url_ready);
 
+        $parts = explode('/', $url_ready);
+
+        if (count($parts) > 1) {
+            $url_ready = $parts[1];
+            $_REQUEST['lang'] = $parts[0];
+        } else {
+            $url_ready = $parts[0];
+        }
+
         $this->_urlReady = $url_ready;
     }
 

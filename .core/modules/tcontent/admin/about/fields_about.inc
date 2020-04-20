@@ -8,6 +8,17 @@ return array(
         'PK' => true
     ),
 
+    'lang' => array(
+        'title' => 'Язык',
+        'type' => 'select',
+        'options' => array(
+            '' => DEFAULT_SELECT_NAME, 'ru' => 'Русский', 'ua' => 'Украинский',
+        ),
+        'required' => true,
+        'browse' => true,
+        'view' => true,
+    ),
+
     'admin_short_name' => array(
         'title' => 'Заголовок',
         'type' => 'text',

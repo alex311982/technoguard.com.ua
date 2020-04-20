@@ -13,15 +13,15 @@
         <nav role="navigation" class="menu-mobile">
             <img src="/-images/new/assets/images/technoguard_logo.svg" alt="Technoguard Logo">
             <ul>
-                <li><a href="/about">О компании</a></li>
-                <li><a href="/contact">Контакты</a></li>
+                <li><a href="/about"><!--{$translations.menu_1}--></a></li>
+                <li><a href="/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
         </nav>
 
         <nav role="navigation" class="menu">
             <ul>
-                <li><a href="/about">О компании</a></li>
-                <li><a href="/contact">Контакты</a></li>
+                <li><a href="/about"><!--{$translations.menu_1}--></a></li>
+                <li><a href="/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
         </nav>
     </header>

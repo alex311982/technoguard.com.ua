@@ -9,6 +9,17 @@ return array(
         'view' => false,
     ),
 
+    'lang' => array(
+        'title' => 'Язык',
+        'type' => 'select',
+        'options' => array(
+            '' => DEFAULT_SELECT_NAME, 'ru' => 'Русский', 'ua' => 'Украинский',
+        ),
+        'required' => true,
+        'browse' => true,
+        'view' => true,
+    ),
+
     'news_title' => array(
         'title' => 'Заголовок',
         'type' => 'text',
@@ -21,7 +32,7 @@ return array(
         'title' => 'Направление',
         'type' => 'select',
         'options' => array(
-            'retail' => 'Ритейл', 'agroprom' => 'Агропром', 'RFID' => 'RFID'
+            '' => DEFAULT_SELECT_NAME, 'retail' => 'Ритейл', 'agroprom' => 'Агропром', 'RFID' => 'RFID'
         ),
         'required' => true,
         'browse' => true,

@@ -1,11 +1,21 @@
 <?php
 
+$tmp_setting_img_url_setting = imgResizeSettings::getSettingsItem("bannerPhotos");
+
 return array(
     'id' => array(
         'title' => 'Id',
         'browse' => false,
         'view' => false,
         'PK' => true
+    ),
+
+    'code' => array(
+        'title' => 'Код',
+        'type' => 'text',
+        'browse' => true,
+        'view' => true,
+        'required' => true,
     ),
 
     'lang' => array(
@@ -20,22 +30,12 @@ return array(
     ),
 
     'text' => array(
-        'title' => 'Полный текст',
-        'type' => 'html',
-        'required' => false,
-        //'browse' => true,
-        'view' => true,
-    ),
-
-    'direction_type' => array(
-        'title' => 'Направление',
-        'type' => 'select',
-        'options' => array(
-            '' => DEFAULT_SELECT_NAME, 'retail' => 'Ритейл', 'agroprom' => 'Агропром', 'RFID' => 'RFID'
-        ),
-        'required' => true,
-        'browse' => true,
-        'view' => true,
+        'title'		=> 'Текст',
+        'type'		=> 'textarea',
+        'required'	=> true,
+        'browse'	=> true,
+        'view'		=> true,
+        'rows'		=> 15,
     ),
 
     'enabled' => array(

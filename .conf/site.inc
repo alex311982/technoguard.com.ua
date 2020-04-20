@@ -33,5 +33,4 @@ DATE_FORMAT_PLAIN		= "d.m.Y H:i"
 page_extension		= ".html"
 DEFAULT_SELECT_VAL = 0
 DEFAULT_SELECT_NAME = "--обрати--"
-
-
+DEFAULT_LANG = "ru"
