@@ -62,5 +62,26 @@ $this->TML->assign('title', $title);
 $this->TML->assign('news', $news);
 $this->TML->assign('decisions', $decisions);
 $this->TML->assign('header', $header);
+$this->TML->assign('lang', $_REQUEST['lang']);
+
+$sql = "SELECT code, text FROM `translations` WHERE `enabled`=1 AND `lang`='" . DEFAULT_LANG . "'";
+
+$translations = $this->DB->runSql($sql,true);
+
+$resolvedTranslations = [];
+
+foreach ($translations as $translation) {
+    $resolvedTranslations[$translation['code']] = $translation['text'];
+}
+$this->TML->assign('translations', $resolvedTranslations);
+
+if ($_REQUEST['lang'] == 'ru') {
+    $this->TML->assign('selectedLang', 'Русский');
+    $this->TML->assign('itemLang', 'Украинский');
+}
+if ($_REQUEST['lang'] == 'ua') {
+    $this->TML->assign('selectedLang', 'Украинский');
+    $this->TML->assign('itemLang', 'Русский');
+}
 
 $this->Display('common:direction/category/page.browse.tpl');

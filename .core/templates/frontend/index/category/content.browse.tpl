@@ -13,16 +13,40 @@
         <nav role="navigation" class="menu-mobile">
             <img src="/-images/new/assets/images/technoguard_logo.svg" alt="Technoguard Logo">
             <ul>
-                <li><a href="/about"><!--{$translations.menu_1}--></a></li>
-                <li><a href="/contact"><!--{$translations.menu_2}--></a></li>
+                <li><a href="/<!--{$lang}-->/about"><!--{$translations.menu_1}--></a></li>
+                <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
+            <div class="cselect cselect--phone">
+              <div data-select="ru" class="cselect__selected">Русский</div>
+              <ul class="cselect__list">
+                <li data-select="ua" class="cselect__item">Українською</li>
+              </ul>
+              <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
+                <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
+                  <line id="Line_12" data-name="Line 12" x2="3" y2="3" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+                  <line id="Line_13" data-name="Line 13" x1="3" y2="3" transform="translate(3)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
         </nav>
 
         <nav role="navigation" class="menu">
             <ul>
-                <li><a href="/about"><!--{$translations.menu_1}--></a></li>
-                <li><a href="/contact"><!--{$translations.menu_2}--></a></li>
+                <li><a href="/<!--{$lang}-->/about""><!--{$translations.menu_1}--></a></li>
+                <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
+            <div class="cselect">
+              <div data-select="ru" class="cselect__selected"><!--{$selectedLang}--></div>
+              <ul class="cselect__list">
+                <li data-select="ua" class="cselect__item"><!--{$itemLang}--></li>
+              </ul>
+              <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
+                <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
+                  <line id="Line_12" data-name="Line 12" x2="3" y2="3" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+                  <line id="Line_13" data-name="Line 13" x1="3" y2="3" transform="translate(3)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
         </nav>
     </header>
 </div>
@@ -69,7 +93,7 @@
                         и оптовой торговли от краж и порчи
                         с комфортом для персонала
                         и покупателя</p>
-                    <a href="/direction.html?type=retail">
+                    <a href="/<!--{$lang}-->/direction.html?type=retail">
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
                         Выбрать решение для ритейла
                     </a>
@@ -82,7 +106,7 @@
                     <h2>Агропром</h2>
                     <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
                         и транспортировки сельхозпродукции</p>
-                    <a href="/direction.html?type=agroprom">
+                    <a href="/<!--{$lang}-->/direction.html?type=agroprom">
                         Выбрать решение для агропрома
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
                     </a>
@@ -95,7 +119,7 @@
                         и оптовой торговли от краж и порчи
                         с комфортом для персонала
                         и покупателя</p>
-                    <a href="/direction.html?type=RFID">
+                    <a href="/<!--{$lang}-->/direction.html?type=RFID">
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
                         Выбрать решение для RFID
                     </a>

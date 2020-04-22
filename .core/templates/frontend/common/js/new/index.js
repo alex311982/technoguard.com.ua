@@ -75,5 +75,49 @@ $(document).ready(function () {
     }
 
     scrollToAnchor($benefitLinks)
+
+    let select = $(".cselect");
+    let selectedEl;
+    let arrowEl;
+    if(select.length) {
+      selectedEl = select.find(".cselect__selected");
+      selectedEl.on("click",selectClickHandler);
+      arrowEl = select.find(".cselect__arrow");
+    }
+
+    function selectClickHandler(e) {
+      e.stopPropagation();
+      toggleSelect(select);
+      arrowEl.addClass("cselect__arrow--rotate");
+      $(window).on("click", closeSelectClickHandler);
+      selectedEl.off("click",selectClickHandler);
+    }
+
+    function closeSelectClickHandler(e) {
+      e.stopPropagation();
+      let clickedEl = $(e.target);
+      if(clickedEl.hasClass("cselect__item")) {
+        document.cookie = "lang=" + clickedEl.data("select");
+
+        var parts = location.pathname.substring(1).split('/');
+
+        if (parts[0].length == 2) {
+          console.log('dddd');
+          console.log(clickedEl.data("select"));
+          parts[0] = clickedEl.data("select");
+        }
+
+        window.location.href = 'http://technoguard.com.ua/' + parts.join('/');
+      } else {
+        toggleSelect(select);
+        arrowEl.removeClass("cselect__arrow--rotate");
+        $(window).off("click", closeSelectClickHandler);
+        selectedEl.on("click",selectClickHandler);
+      }
+    }
+
+    function toggleSelect(select) {
+      select.find(".cselect__list").toggleClass("cselect__list--active");
+    }
   });
 });

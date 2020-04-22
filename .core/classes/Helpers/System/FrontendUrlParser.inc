@@ -66,14 +66,45 @@ class FrontendUrlParser
         $url_ready = ($url_ready{0} == '/') ? substr($url_ready, 1) : $url_ready;
         $url_ready = str_replace('"', '', $url_ready);
 
+        if ($url_ready == 'index') {
+            if (isset($_COOKIE['lang'])) {
+                $redirectLang = $_COOKIE['lang'];
+            } else {
+                $redirectLang = DEFAULT_LANG;
+            }
+
+            $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'
+                || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+
+            header('Location: '.$protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] . $redirectLang . '/');
+            exit;
+        }
+
         $parts = explode('/', $url_ready);
 
-        if (count($parts) > 1) {
-            $url_ready = $parts[1];
-            $_REQUEST['lang'] = $parts[0];
-        } else {
-            $url_ready = $parts[0];
+        if (isset($_COOKIE['lang'])) {
+            $_REQUEST['lang'] = $_COOKIE['lang'];
         }
+
+        if (count($parts) > 1 && !empty($parts[1])) {
+            $url_ready = $parts[1];
+
+            if (!isset($_REQUEST['lang'])) {
+                $_REQUEST['lang'] = $parts[0];
+            }
+        } else {
+            if (strlen($parts[0]) == 2) {
+                $_REQUEST['lang'] = $parts[0];
+            }
+
+            $url_ready = 'index';
+        }
+
+        if (!isset($_REQUEST['lang'])) {
+            $_REQUEST['lang'] = DEFAULT_LANG;
+        }
+
+        setcookie("lang", $_REQUEST['lang'], time()+3600, '/');
 
         $this->_urlReady = $url_ready;
     }

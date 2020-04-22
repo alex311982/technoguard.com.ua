@@ -41,6 +41,17 @@ $this->TML->assign('news', $news);
 $this->TML->assign('direction_title2', $directions[$item['direction_type']]);
 $this->TML->assign('next_news_id', $nextNewsId);
 $this->TML->assign('title', $item['news_title']);
+$this->TML->assign('lang', $_REQUEST['lang']);
 
+$sql = "SELECT code, text FROM `translations` WHERE `enabled`=1 AND `lang`='" . DEFAULT_LANG . "'";
+
+$translations = $this->DB->runSql($sql,true);
+
+$resolvedTranslations = [];
+
+foreach ($translations as $translation) {
+    $resolvedTranslations[$translation['code']] = $translation['text'];
+}
+$this->TML->assign('translations', $resolvedTranslations);
 
 $this->Display('common:news/news/page.browse.tpl');
