@@ -97,7 +97,7 @@ $(document).ready(function () {
       e.stopPropagation();
       let clickedEl = $(e.target);
       if(clickedEl.hasClass("cselect__item")) {
-        document.cookie = "lang=" + clickedEl.data("select");
+        document.cookie = "lang=" + clickedEl.data("select") + "; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
 
         var parts = location.pathname.substring(1).split('/');
 
@@ -107,7 +107,7 @@ $(document).ready(function () {
           parts[0] = clickedEl.data("select");
         }
 
-        window.location.href = 'http://technoguard.com.ua/' + parts.join('/');
+        window.location.href = 'http://technoguard.com.ua/' + parts.join('/') + '?' + window.location.search.replace("?", "");
       } else {
         toggleSelect(select);
         arrowEl.removeClass("cselect__arrow--rotate");

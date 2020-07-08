@@ -299,4 +299,17 @@ class imgResizeSettings
         ),
     );
 
+    static public $indexblockPhotos = array(
+        "base_photo_path" => "/indexblock/",
+        "size_settings" => array(
+            array(
+                "size_dir" => "size1",
+                "size_single" => 150, // x141
+                "size_width" => 0,
+                "size_height" => 0,
+                "resize_method" => "resize_proportional_by_width",
+            ),
+        ),
+    );
+
 }

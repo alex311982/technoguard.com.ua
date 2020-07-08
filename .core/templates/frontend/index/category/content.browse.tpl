@@ -17,10 +17,10 @@
                 <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
             <div class="cselect cselect--phone">
-              <div data-select="ru" class="cselect__selected">Русский</div>
-              <ul class="cselect__list">
-                <li data-select="ua" class="cselect__item">Українською</li>
-              </ul>
+              <div data-select="<!--{$selectedLangCode}-->" class="cselect__selected"><!--{$selectedLang}--></div>
+                <ul class="cselect__list">
+                    <li data-select="<!--{$itemLangCode}-->" class="cselect__item"><!--{$itemLang}--></li>
+                </ul>
               <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
                 <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
                   <line id="Line_12" data-name="Line 12" x2="3" y2="3" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
@@ -36,9 +36,9 @@
                 <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
             <div class="cselect">
-              <div data-select="ru" class="cselect__selected"><!--{$selectedLang}--></div>
+              <div data-select="<!--{$selectedLangCode}-->" class="cselect__selected"><!--{$selectedLang}--></div>
               <ul class="cselect__list">
-                <li data-select="ua" class="cselect__item"><!--{$itemLang}--></li>
+                <li data-select="<!--{$itemLangCode}-->" class="cselect__item"><!--{$itemLang}--></li>
               </ul>
               <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
                 <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
@@ -59,7 +59,7 @@
                     <div class="slide__image">
                         <img src="<!--{$banner.imagePath}-->" alt="Slider image">
                         <a href="<!--{$banner.url}-->">
-                            Узнать
+                            <!--{$translations.indexpage_banner_button_getacknowledgment}-->
                         </a>
                     </div>
                     <div class="slide__right">
@@ -79,78 +79,47 @@
     <section class="tabs">
 
         <ul class="tabs__caption">
-            <li class="active"><a href="#retail" data-scroll="retail">Ритейл</a></li>
-            <li><a href="#agroprom" data-scroll="agroprom">Агропром</a></li>
-            <li><a href="#rfid" data-scroll="rfid">RFID</a></li>
+            <li class="active"><a href="#retail" data-scroll="retail"><!--{$translations.indexpage_retail}--></a></li>
+            <li><a href="#agroprom" data-scroll="agroprom"><!--{$translations.indexpage_agroprom}--></a></li>
+            <li><a href="#rfid" data-scroll="rfid"><!--{$translations.indexpage_rfid}--></a></li>
         </ul>
 
         <div class="tabs__content active">
-
-            <div class="tab__content">
-                <div id="retail" class="tab__main left-position">
-                    <h2>Ритейл</h2>
-                    <p>Защищаем предприятия розничной
-                        и оптовой торговли от краж и порчи
-                        с комфортом для персонала
-                        и покупателя</p>
-                    <a href="/<!--{$lang}-->/direction.html?type=retail">
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение для ритейла
-                    </a>
+            <!--{foreach from=$indexblocks item=indexblock}-->
+                <div class="tab__content">
+                    <div id="retail" class="tab__main left-position">
+                        <h2><!--{$indexblock.title}--></h2>
+                        <p><!--{$indexblock.text}--></p>
+                        <a href="/<!--{$lang}-->/direction.html?type=<!--{$indexblock.direction_type}-->">
+                            <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
+                            <!--{$indexblock.button_title}-->
+                        </a>
+                    </div>
+                    <img class="tab__image" src="<!--{$indexblock.imagePath}-->" alt="tab 1">
                 </div>
-                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-            </div>
-            <div class="tab__content">
-                <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-                <div id="agroprom" class="tab__main right-position">
-                    <h2>Агропром</h2>
-                    <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                        и транспортировки сельхозпродукции</p>
-                    <a href="/<!--{$lang}-->/direction.html?type=agroprom">
-                        Выбрать решение для агропрома
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                    </a>
-                </div>
-            </div>
-            <div class="tab__content">
-                <div id="rfid" class="tab__main left-position">
-                    <h2>RFID</h2>
-                    <p>Защищаем предприятия розничной
-                        и оптовой торговли от краж и порчи
-                        с комфортом для персонала
-                        и покупателя</p>
-                    <a href="/<!--{$lang}-->/direction.html?type=RFID">
-                        <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение для RFID
-                    </a>
-                </div>
-                <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-            </div>
+            <!--{/foreach}-->
         </div>
     </section>
     <section class="tabs-mobile">
         <div data-scroll="retail">
             <a href="/direction.html?type=retail" class="tabs-mobile-content">
-                <h2>Ритейл</h2>
+                <h2><!--{$translations.indexpage_retail}--></h2>
                 <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                    и транспортировки сельхозпродукции</p>
+                <p><!--{$translations.indexpage_retail_text}--></p>
             </a>
         </div>
         <div data-scroll="agroprom">
             <a href="/direction.html?type=agroprom" class="tabs-mobile-content">
-                <h2>Агропром</h2>
+                <h2><!--{$translations.indexpage_agroprom}--></h2>
                 <img class="tab__image" src="/-images/new/assets/images/tab-2.png" alt="tab 1">
-                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                    и транспортировки сельхозпродукции</p>
+                <p><!--{$translations.indexpage_agroprom_text}--></p>
             </a>
         </div>
         <div data-scroll="rfid">
             <a href="/direction.html?type=RFID" class="tabs-mobile-content">
-                <h2>RFID</h2>
+                <h2><!--{$translations.indexpage_rfid}--></h2>
                 <img class="tab__image" src="/-images/new/assets/images/tab-1.png" alt="tab 1">
-                <p>Проектируем, устанавливаем и обслуживаем решения, на базе технологии RFID для учета, хранения
-                    и транспортировки сельхозпродукции</p>
+                <p><!--{$translations.indexpage_rfid_text}--></p>
             </a>
         </div>
     </section>
@@ -161,18 +130,17 @@
         <div class="contact-form">
             <img src="/-images/new/assets/images/form-photo.png" alt="contact form photo">
             <div class="inner-form">
-                <h3>Спросите нас</h3>
+                <h3><!--{$translations.global_ask_us}--></h3>
                 <form action="./index.js">
-                    <input required placeholder="Ваше имя" aria-placeholder="Ваше имя" type="text" name="name" id="name">
+                    <input required placeholder="<!--{$translations.global_ask_us_your_name}-->" aria-placeholder="<!--{$translations.global_ask_us_your_name}-->" type="text" name="name" id="name">
                     <input required placeholder="Email" aria-placeholder="Email" type="email" name="email" id="email">
-                    <textarea placeholder="Опишите ваш запрос в двух словах"
-                              aria-placeholder="Опишите ваш запрос в двух словах" name="about" id="about" rows="10"></textarea>
-                    <button class="form-button" type="submit">Отправить запрос</button>
+                    <textarea placeholder="<!--{$translations.global_ask_us_question}-->"
+                              aria-placeholder="<!--{$translations.global_ask_in_2_words}-->" name="about" id="about" rows="10"></textarea>
+                    <button class="form-button" type="submit"><!--{$translations.global_ask_us_button_send}--></button>
                 </form>
                 <div class="success-block">
                     <img src="/-images/new/assets/icons/ic_mark.svg" alt="Mark icon">
-                    <p>Спасибо за ваше обращение.
-                        Мы постараемся ответить быстро!</p>
+                    <p><!--{$translations.global_ask_us_thanks}--></p>
                 </div>
             </div>
         </div>
@@ -185,7 +153,7 @@
             <nav class="footer__menu">
                 <ul>
                     <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
-                    <li><a href="/contact">Контакты</a></li>
+                    <li><a href="/<!--{$lang}-->/contact"><!--{$translations.global_footer_contacts}--></a></li>
                 </ul>
             </nav>
             <img class="blurred-line" src="/-images/new/assets/icons/blurred_line.svg" alt="blurred line">

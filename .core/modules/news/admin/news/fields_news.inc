@@ -9,6 +9,14 @@ return array(
         'view' => false,
     ),
 
+    'code' => array(
+        'title' => 'Код',
+        'type' => 'text',
+        'browse' => true,
+        'view' => true,
+        'required' => true,
+    ),
+
     'lang' => array(
         'title' => 'Язык',
         'type' => 'select',

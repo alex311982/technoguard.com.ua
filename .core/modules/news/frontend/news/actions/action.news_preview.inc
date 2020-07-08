@@ -1,5 +1,7 @@
 <?php
 
+$lang = DEFAULT_LANG;
+
 $newsId = isset($_REQUEST['id']) ? (int)$_REQUEST['id'] : 1;
 
 $sql = "SELECT * FROM `news` WHERE `id` = '{$newsId}' AND enabled=1";
@@ -14,7 +16,7 @@ $directions = array(
 
 $direction_title = $directions[$item['direction_type']];
 
-$sql = "SELECT * FROM `news` WHERE `direction_type` = '{$item['direction_type']}' AND enabled=1 AND `id` != {$newsId} ORDER BY `date_created` DESC";
+$sql = "SELECT * FROM `news` WHERE `direction_type` = '{$item['direction_type']}' AND `lang`= '{$lang}' AND enabled=1 AND `id` != {$newsId} ORDER BY `date_created` DESC";
 
 $news = $this->DB->RunSql($sql, true);
 
@@ -53,5 +55,18 @@ foreach ($translations as $translation) {
     $resolvedTranslations[$translation['code']] = $translation['text'];
 }
 $this->TML->assign('translations', $resolvedTranslations);
+
+if ($_REQUEST['lang'] == 'ru') {
+    $this->TML->assign('selectedLang', 'Русский');
+    $this->TML->assign('selectedLangCode', 'ru');
+    $this->TML->assign('itemLang', 'Украинский');
+    $this->TML->assign('itemLangCode', 'ua');
+}
+if ($_REQUEST['lang'] == 'ua') {
+    $this->TML->assign('selectedLang', 'Украинский');
+    $this->TML->assign('selectedLangCode', 'ua');
+    $this->TML->assign('itemLang', 'Русский');
+    $this->TML->assign('itemLangCode', 'ru');
+}
 
 $this->Display('common:news/news/page.browse.tpl');

@@ -17,10 +17,10 @@
                 <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
             <div class="cselect cselect--phone">
-              <div data-select="ru" class="cselect__selected">Русский</div>
-              <ul class="cselect__list">
-                <li data-select="ua" class="cselect__item">Українською</li>
-              </ul>
+                <div data-select="<!--{$selectedLangCode}-->" class="cselect__selected"><!--{$selectedLang}--></div>
+                <ul class="cselect__list">
+                    <li data-select="<!--{$itemLangCode}-->" class="cselect__item"><!--{$itemLang}--></li>
+                </ul>
               <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
                 <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
                   <line id="Line_12" data-name="Line 12" x2="3" y2="3" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
@@ -36,10 +36,10 @@
                 <li><a href="/<!--{$lang}-->/contact"><!--{$translations.menu_2}--></a></li>
             </ul>
             <div class="cselect">
-              <div data-select="ru" class="cselect__selected">Русский</div>
-              <ul class="cselect__list">
-                <li data-select="ua" class="cselect__item">Українською</li>
-              </ul>
+                <div data-select="<!--{$selectedLangCode}-->" class="cselect__selected"><!--{$selectedLang}--></div>
+                <ul class="cselect__list">
+                    <li data-select="<!--{$itemLangCode}-->" class="cselect__item"><!--{$itemLang}--></li>
+                </ul>
               <svg class="cselect__arrow" xmlns="http://www.w3.org/2000/svg" width="8.828" height="5.828" viewBox="0 0 8.828 5.828">
                 <g id="Group_30" data-name="Group 30" transform="translate(1.414 1.414)" opacity="0.5">
                   <line id="Line_12" data-name="Line 12" x2="3" y2="3" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
@@ -54,7 +54,7 @@
 <main class="heading">
     <div class="container">
         <div class="heading__title">
-            <h1><!--{$header.direction_title}--> <span>/</span></h1>
+            <h1><!--{$header.direction_title}--> </h1>
             <h2><!--{$header.title}--></h2>
         </div>
     </div>
@@ -67,31 +67,17 @@
     <div class="container">
         <div class="description__inner">
             <div class="description__block">
-                <p>Онлайн-мониторинг событий в торговых залах — на входе и выходе, в складских помещениях, в зоне погрузки
-                    товара, на автостоянке.</p>
-                <p>Контроль кассовых операций
-                    с помощью системы видеонаблюдения, интегрированной с кассовыми терминалами.</p>
-                <p class="special"><span>/</span> Акустомагнитное и радиочастотное антикражное оборудование — антикражные
-                    этикетки и датчики
-                    на товаре, съемники и деактиваторы
-                    для проданных товаров.</p>
-                <p>Антикражные ворота с сигналом
-                    о попытке выноса неоплаченного товара из магазина.</p>
-            </div>
-            <div class="description__block">
-                <p class="special"><span>/</span> Защищенные решения для открытой выкладки товаров с подзарядкой, аналитикой,
-                    презентацией.
-                </p>
-                <p>Контроль несанкционированного прохода в служебные помещения, идентификация посетителей, учет времени
-                    персонала.</p>
-                <p>Предупреждение взлома, нападения, открытия, потери связи электропитания.</p>
+                <div class="description__block">
+                    <!--{foreach from=$directionquotes1 item=directionquote}-->
+                        <p <!--{if $directionquote.is_special == 1}-->class="special"<!--{/if}-->><!--{$directionquote.text}--></p>
+                    <!--{/foreach}-->
+                </div>
 
-                <p>Сбор и анализ данных о потоках потенциальных клиентов
-                    за определенный промежуток времени.</p>
-
-                <p>Пожарное оповещение
-                    и музыкальное фоновое озвучивание
-                    для стимуляции сбыта в точках продаж.</p>
+                <div class="description__block">
+                    <!--{foreach from=$directionquotes2 item=directionquote}-->
+                        <p <!--{if $directionquote.is_special == 1}-->class="special"<!--{/if}-->><!--{$directionquote.text}--></p>
+                    <!--{/foreach}-->
+                </div>
             </div>
         </div>
     </div>
@@ -101,8 +87,7 @@
 <section class="benefits">
     <div class="container">
         <div class="benefits__title">
-            <h3>Наши решения для защиты от краж
-                и порчи имущества <span class="line">/</span> <span class="grey">в ритейле</span></h3>
+            <h3><!--{$translations.direction_rfid_10}--> <span class="line">/</span> <span class="grey"><!--{$translations.direction_rfid_11}--></span></h3>
         </div>
         <div class="benefits__main">
             <!--{foreach from=$decisions item=decision}-->
@@ -121,7 +106,7 @@
                     <p><!--{$decision.text}--></p>
                     <a href="/<!--{$lang}-->/decision.html?id=<!--{$decision.id}-->">
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение
+                        <!--{$translations.direction_3}-->
                     </a>
                 </div>
                 <img class="tab__image" src="<!--{$decision.imagePath}-->" alt="tab 1">
@@ -136,7 +121,7 @@
                     <p><!--{$decision.text}--></p>
                     <a href="/<!--{$lang}-->/decision.html?id=<!--{$decision.id}-->">
                         <img src="/-images/new/assets/icons/ic_arrow.svg" alt="arrow icon">
-                        Выбрать решение
+                        <!--{$translations.direction_3}-->
                     </a>
                 </div>
             <!--{/foreach}-->
@@ -166,18 +151,17 @@
         <div class="contact-form">
             <img src="/-images/new/assets/images/form-photo.png" alt="contact form photo">
             <div class="inner-form">
-                <h3>Спросите нас</h3>
+                <h3><!--{$translations.global_ask_us}--></h3>
                 <form action="./index.js">
-                    <input required placeholder="Ваше имя" aria-placeholder="Ваше имя" type="text" name="name" id="name">
+                    <input required placeholder="<!--{$translations.global_ask_us_your_name}-->" aria-placeholder="<!--{$translations.global_ask_us_your_name}-->" type="text" name="name" id="name">
                     <input required placeholder="Email" aria-placeholder="Email" type="email" name="email" id="email">
-                    <textarea placeholder="Опишите ваш запрос в двух словах" aria-placeholder="Опишите ваш запрос в двух словах"
-                              name="about" id="about" rows="10"></textarea>
-                    <button class="form-button" type="submit">Отправить запрос</button>
+                    <textarea placeholder="<!--{$translations.global_ask_us_question}-->"
+                              aria-placeholder="<!--{$translations.global_ask_in_2_words}-->" name="about" id="about" rows="10"></textarea>
+                    <button class="form-button" type="submit"><!--{$translations.global_ask_us_button_send}--></button>
                 </form>
                 <div class="success-block">
                     <img src="/-images/new/assets/icons/ic_mark.svg" alt="Mark icon">
-                    <p>Спасибо за ваше обращение.
-                        Мы постараемся ответить быстро!</p>
+                    <p><!--{$translations.global_ask_us_thanks}--></p>
                 </div>
             </div>
         </div>
@@ -190,7 +174,7 @@
             <nav class="footer__menu">
                 <ul>
                     <li><a href="https://www.facebook.com/TechnoguardUA/">Facebook</a></li>
-                    <li><a href="/<!--{$lang}-->/contact">Контакты</a></li>
+                    <li><a href="/<!--{$lang}-->/contact"><!--{$translations.global_footer_contacts}--></a></li>
                 </ul>
             </nav>
             <img class="blurred-line" src="/-images/new/assets/icons/blurred_line.svg" alt="blurred line">

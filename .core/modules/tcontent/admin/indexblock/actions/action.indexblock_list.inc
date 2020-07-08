@@ -3,7 +3,7 @@
 $this->saveFilterState();
 
 $this->DB->per_page = 20;
-$this->DB->default_order = array('code' => "ASC");
+$this->DB->default_order = array($this->PK => "ASC");
 $where = array();
 $where_sql = "";
 

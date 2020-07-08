@@ -104,7 +104,8 @@ class FrontendUrlParser
             $_REQUEST['lang'] = DEFAULT_LANG;
         }
 
-        setcookie("lang", $_REQUEST['lang'], time()+3600, '/');
+
+        //setcookie("lang", $_REQUEST['lang'], time()+3600, '/');
 
         $this->_urlReady = $url_ready;
     }

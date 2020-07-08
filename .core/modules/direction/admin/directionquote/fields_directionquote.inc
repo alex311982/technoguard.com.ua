@@ -8,6 +8,14 @@ return array(
         'PK' => true
     ),
 
+    'code' => array(
+        'title' => 'Код',
+        'type' => 'text',
+        'browse' => true,
+        'view' => true,
+        'required' => true,
+    ),
+
     'lang' => array(
         'title' => 'Язык',
         'type' => 'select',
@@ -20,11 +28,12 @@ return array(
     ),
 
     'text' => array(
-        'title' => 'Полный текст',
-        'type' => 'html',
-        'required' => false,
-        //'browse' => true,
-        'view' => true,
+        'title'		=> 'Цитата',
+        'type'		=> 'textarea',
+        'required'	=> true,
+        'browse'	=> true,
+        'view'		=> true,
+        'rows'		=> 3,
     ),
 
     'direction_type' => array(
@@ -44,5 +53,12 @@ return array(
         'view' => true,
         'browse' => true,
         'init_status' => 'checked'
+    ),
+
+    'is_special' => array(
+        'title' => 'Специальная цитата',
+        'type' => 'checkbox',
+        'view' => true,
+        'browse' => true
     ),
 );

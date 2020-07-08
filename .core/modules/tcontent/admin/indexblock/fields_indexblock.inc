@@ -1,6 +1,6 @@
 <?php
 
-$tmp_setting_img_url_setting = imgResizeSettings::getSettingsItem("bannerPhotos");
+$tmp_setting_img_url_setting = imgResizeSettings::getSettingsItem("indexblockPhotos");
 
 return array(
     'id' => array(
@@ -30,24 +30,36 @@ return array(
     ),
 
     'title' => array(
-        'title' => 'Название',
+        'title' => 'Тайтл',
         'type' => 'text',
-        //'required' => true,
+        'required' => true,
         'browse' => true,
         'view' => true,
     ),
 
-    'subtitle' => array(
-        'title' => 'Подзаголовок',
+    'text' => array(
+        'title' => 'Текст',
         'type' => 'text',
-        //'required' => true,
+        'required' => true,
         'browse' => true,
         'view' => true,
     ),
 
-    'url' => array(
-        'title' => 'Url',
+    'button_title' => array(
+        'title' => 'Тайтл кнопки',
         'type' => 'text',
+        'required' => true,
+        'browse' => true,
+        'view' => true,
+    ),
+
+    'direction_type' => array(
+        'title' => 'Направление',
+        'type' => 'select',
+        'options' => array(
+            '' => DEFAULT_SELECT_NAME, 'retail' => 'Ритейл', 'agroprom' => 'Агропром', 'RFID' => 'RFID'
+        ),
+        'required' => true,
         'browse' => true,
         'view' => true,
     ),
@@ -72,16 +84,7 @@ return array(
         "direct_image" => true,
         "width" => '120px',
         "align" => "center",
-    ),
-
-
-    'sort_order' => array(
-        'title' => 'Порядок',
-        "sort_order" => true,
         'browse' => true,
-        "width" => "60px",
-        "moving_item_id" => '<!--{$result.records.$id.id.value}-->',
-        "extra_params_str" => ''
     ),
 
 );
