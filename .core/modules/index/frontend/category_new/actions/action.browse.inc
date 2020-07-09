@@ -78,4 +78,4 @@ foreach ($tempIndexblocks as $code => $tempIndexblock) {
 
 $this->TML->assign('indexblocks', $resolvedIndexblocks);
 
-$this->Display('common:index/category/page.browse.tpl');
+$this->Display('common:index/category_new/page.browse.tpl');
