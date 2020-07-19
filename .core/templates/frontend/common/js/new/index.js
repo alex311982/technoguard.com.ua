@@ -231,7 +231,7 @@ $(document).ready(function () {
         gsap.to(buttonBackEl, {
           duration: 0.5,
           ease: "expo.out",
-          css: { autoAlpha: 1, left: "-15px" },
+          css: { autoAlpha: 1, left: "-20px" },
           onComplete: () => buttonBackEl.on("click", buttonBackClickHandler),
         }),
         "-=0.5"
