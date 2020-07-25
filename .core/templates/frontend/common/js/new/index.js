@@ -162,7 +162,8 @@ $(document).ready(function () {
   let navEl = $(".menu-mobile");
   let menuSecondaryButtonEl = navEl.find(".menu-mobile__secondary-button");
   menuSecondaryButtonEl.on("click", secondaryButtonClickHandler);
-  function secondaryButtonClickHandler() {
+  function secondaryButtonClickHandler(e) {
+    if($(e.target).parent().parent().find(".menu-mobile__third-item")[0]) e.preventDefault();
     menuSecondaryButtonEl.off("click", secondaryButtonClickHandler);
     let tl = null;
     let animationEl = $(this).parent().parent();
@@ -186,7 +187,6 @@ $(document).ready(function () {
     animateButtonMovement();
 
     function replaceButtonWithEmptyEl() {
-      console.log(animationEl.outerWidth());
       emptyEl.css("height", animationEl.outerHeight() + "px");
       navEl.append(animationEl);
       initialWrapEl.append(emptyEl);
